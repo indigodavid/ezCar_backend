@@ -1,9 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Car, type: :model do
-  subject(:car) {
-    Car.create(name: 'Golf', car_type: 'Arel', brand: 'Volkswagen', fee_per_day: 2800, color: 'blue', image: 'Ii is me', rented: true)
-  }
+  subject(:car) do
+    Car.create(name: 'Golf', car_type: 'Arel', brand: 'Volkswagen', fee_per_day: 2800, color: 'blue',
+               image: 'Ii is me', rented: true)
+  end
 
   it 'is valid with valid attributes' do
     expect(car).to be_valid
