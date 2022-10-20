@@ -1,9 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Ez Car
 
 > This project contains an API that is consumed by our React frontend. It was built using Rails as an API.
 
+## ERD diagram
+
+![ERD](https://user-images.githubusercontent.com/97900045/196997928-2c857de9-a9fc-4216-8480-9580cc9bc6c0.png)
 
 ## Built With
 
