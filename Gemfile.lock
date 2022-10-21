@@ -69,6 +69,7 @@ GEM
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
+    bcrypt (3.1.18)
     bootsnap (1.13.0)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -123,6 +124,8 @@ GEM
     net-smtp (0.3.2)
       net-protocol
     nio4r (2.5.8)
+    nokogiri (1.13.9-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.9-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.13.9-x86_64-linux)
@@ -230,10 +233,12 @@ GEM
     zeitwerk (2.6.1)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-darwin-19
   x86_64-linux
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   capybara
   database_cleaner
