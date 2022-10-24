@@ -1,4 +1,6 @@
 class Api::V1::CarsController < ApplicationController
+  before_action :authenticate_user!
+  before_action :set_user
   before_action :set_car, only: %i[show update destroy]
 
   # GET /cars
@@ -43,6 +45,10 @@ class Api::V1::CarsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_car
     @car = Car.find(params[:id])
+  end
+
+  def set_user
+    @user = current_user
   end
 
   # Only allow a list of trusted parameters through.
