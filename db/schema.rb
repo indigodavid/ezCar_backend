@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_24_160253) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_24_171018) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -26,13 +26,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_24_160253) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "jwt_denylist", force: :cascade do |t|
+    t.string "jti", null: false
+    t.datetime "exp", null: false
+    t.index ["jti"], name: "index_jwt_denylist_on_jti"
+  end
+
   create_table "reservations", force: :cascade do |t|
     t.date "reservation_date"
     t.date "due_date"
     t.bigint "car_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "reserve_days", default: 1
+    t.float "total_amount", default: 0.0
+    t.bigint "user_id", null: false
     t.index ["car_id"], name: "index_reservations_on_car_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,4 +62,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_24_160253) do
   end
 
   add_foreign_key "reservations", "cars"
+  add_foreign_key "reservations", "users"
 end
