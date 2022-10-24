@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'private/test'
   namespace :api do
     namespace :v1 do
