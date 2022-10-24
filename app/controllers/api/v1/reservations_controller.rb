@@ -1,9 +1,11 @@
 class Api::V1::ReservationsController < ApplicationController
+  before_action :authenticate_user!
+  before_action :set_user
   before_action :set_reservation, only: %i[show update destroy]
 
   # GET /reservations
   def index
-    @reservations = Reservation.all
+    @reservations = Reservation.where(user: @user)
 
     render json: @reservations
   end
@@ -43,6 +45,10 @@ class Api::V1::ReservationsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_reservation
     @reservation = Reservation.find(params[:id])
+  end
+
+  def set_user
+    @user = current_user
   end
 
   # Only allow a list of trusted parameters through.
