@@ -6,4 +6,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     sign_in(resource_name, resource)
     render json: resource
   end
+
+  private
+
+  def sign_up_params
+    params.require(:user).permit(:name, :photo, :email, :password, :password_confirmation, :date_of_birth)
+  end
 end
