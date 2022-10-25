@@ -44,8 +44,7 @@ gem 'devise-jwt'
 gem 'rack-cors'
 
 # Use Active Model has_secure_password
-gem 'rswag-api'
-gem 'rswag-ui'
+gem 'rswag'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -59,7 +58,6 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '>= 5.0', '< 6.0'
-  gem 'rswag-specs'
   gem 'webdrivers', '>= 5.0', '< 6.0'
 end
 
