@@ -20,6 +20,6 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     headers: ["Authorization"],
     expose: ["Authorization"],
     methods: [:get, :post, :put, :patch, :delete, :options, :head],
-    max_age: 600 # Access-Control-Max-Age is 10 minutes
+    max_age: 86400 # Access-Control-Max-Age is 1 day in seconds
   end
 end
