@@ -7,6 +7,7 @@ class Ability
     if user.admin?
       can :manage, :all
     else
+      can :read, Car
       can :manage, Reservation, user_id: user.id # only allow user to manage their own reservations
     end
   end
