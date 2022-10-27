@@ -1,4 +1,5 @@
 class Api::V1::ReservationsController < ApplicationController
+  load_and_authorize_resource
   before_action :authenticate_user!
   before_action :set_user
   before_action :set_reservation, only: %i[show update destroy]
@@ -20,7 +21,7 @@ class Api::V1::ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
 
     if @reservation.save
-      render json: @reservation, status: :created, location: @reservation
+      render json: @reservation, status: :created, location: api_v1_reservation_url(@reservation)
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end

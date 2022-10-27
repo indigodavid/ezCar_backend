@@ -9,6 +9,10 @@ class User < ApplicationRecord
 
   has_many :reservations
 
+  def admin?
+    role == 'admin'
+  end
+
   private
 
   def validate_age
