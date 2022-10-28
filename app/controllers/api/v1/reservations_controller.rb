@@ -19,6 +19,7 @@ class Api::V1::ReservationsController < ApplicationController
   # POST /reservations
   def create
     @reservation = Reservation.new(reservation_params)
+    @reservation.user = @user
 
     if @reservation.save
       render json: @reservation, status: :created, location: api_v1_reservation_url(@reservation)
