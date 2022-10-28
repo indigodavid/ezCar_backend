@@ -1,4 +1,5 @@
 class Api::V1::CarsController < ApplicationController
+  load_and_authorize_resource
   before_action :authenticate_user!
   before_action :set_user
   before_action :set_car, only: %i[show update destroy]
@@ -20,7 +21,7 @@ class Api::V1::CarsController < ApplicationController
     @car = Car.new(car_params)
 
     if @car.save
-      render json: @car, status: :created, location: @car
+      render json: @car, status: :created, location: api_v1_car_url(@car)
     else
       render json: @car.errors, status: :unprocessable_entity
     end
