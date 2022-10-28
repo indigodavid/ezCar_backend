@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
 User.create!(name: "Admin", email: "admin@mail.com", password: "password", password_confirmation: "password", role: 'admin', photo: "https://avatars.githubusercontent.com/u/76783698?v=4", date_of_birth: "2000-10-11")
 Car.create(name: "Toyota", car_type: "Sedan", brand: "Toyota", fee_per_day: 100, color: "White", image: "https://www.toyota.com/imgix/responsive/images/mlp/colorizer/2021/c-hr/01.png?auto=format%2Ccompress&fit=crop&h=300&w=300", rented: false)
 Car.create(name: "Honda", car_type: "Sedan", brand: "Honda", fee_per_day: 100, color: "Black", image: "https://www.honda.com.au/content/dam/site/honda/australia/vehicles/civic/2021/overview/overview-1.png", rented: false)
@@ -24,3 +25,19 @@ Car.create(name: "Volkswagen", car_type: "Sedan", brand: "Volkswagen", fee_per_d
 Car.create(name: "Peugeot", car_type: "Sedan", brand: "Peugeot", fee_per_day: 100, color: "Blue", image: "https://www.peugeot.com.au/content/dam/peugeot/australia/vehicles/208/2021/navigation/overview/overview-1.png", rented: false)
 Car.create(name: "Toyota", car_type: "SUV", brand: "Toyota", fee_per_day: 100, color: "White", image: "https://www.toyota.com/imgix/responsive/images/mlp/colorizer/2021/chr/01.png?auto=format%2Ccompress&fit=crop&h=300&w=300", rented: false)
 Car.create(name: "Honda", car_type: "SUV", brand: "Honda", fee_per_day: 100, color: "Black", image: "https://www.honda.com.au/content/dam/site/honda/australia/vehicles/cr-v/2021/navigation/overview/overview-1.png", rented: false)
+
+User.create(name: 'David', email: 'david@gmail.com', password: '123456', password_confirmation: '123456', photo: 'url_david',
+            date_of_birth: '1987-03-20')
+User.create(name: 'Julio', email: 'julio@gmail.com', password: '123456', password_confirmation: '123456', photo: 'url_julio',
+            date_of_birth: '1987-03-20')
+User.create(name: 'Darik', email: 'darik@gmail.com', password: '123456', password_confirmation: '123456',
+            photo: 'url_darik', date_of_birth: '1987-03-20')
+User.create(name: 'Arnaud', email: 'arnaud@gmail.com', password: '123456', password_confirmation: '123456',
+            photo: 'url_arnaud', date_of_birth: '1987-03-20')
+Car.create(name: 'Mercedes G550', car_type: 'SUV', brand: 'Mercedes', fee_per_day: 40.20, color: '#000000',
+           image: 'some url', rented: false)
+@user = User.first
+@car = Car.first
+Reservation.create(user: @user, car: @car, reservation_date: '2022-11-01', due_date: '2022-11-04')
+User.create(name: 'Admin', email: 'admin@gmail.com', password: '123456', password_confirmation: '123456', photo: 'url',
+            date_of_birth: '1987-03-20', role: 'admin')
