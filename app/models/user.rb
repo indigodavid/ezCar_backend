@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates :name, :date_of_birth, presence: true
   validate :validate_age
 
-  has_many :reservations
+  has_many :reservations, dependent: :destroy
 
   def admin?
     role == 'admin'
