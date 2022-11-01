@@ -49,7 +49,7 @@ To get a local copy up and running follow these simple example steps.
 #### Open Terminal 
 
     git clone git@github.com:indigodavid/ezCar_backend.git
-    cd zCar_backend
+    cd ezCar_backend
 
 ### Install
 
