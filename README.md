@@ -30,8 +30,8 @@
 
 ## Live Demo (if available)
 
-[eZ_car](https://ezcar-backend.herokuapp.com/)
-[Video for the API documentation](https://www.loom.com/share/c4df2507582d4538ae3755f26e359c7f)
+- [eZ_car](https://ezcar-backend.herokuapp.com/)
+- [Video for the API documentation](https://www.loom.com/share/c4df2507582d4538ae3755f26e359c7f)
 
 
 ## Getting Started
