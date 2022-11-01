@@ -30,7 +30,7 @@
 
 ## Live Demo (if available)
 
-- [eZ_car](https://ezcar-backend.herokuapp.com/)
+- [eZ_car](https://ezcar-backend.herokuapp.com/api-docs)
 - [Video for the API documentation](https://www.loom.com/share/c4df2507582d4538ae3755f26e359c7f)
 
 
@@ -64,7 +64,8 @@ To get a local copy up and running follow these simple example steps.
     
 ### Run tests
 
-    rspec spec
+    rspec spec/models
+    rake rswag
 
 ### Deployment
 
