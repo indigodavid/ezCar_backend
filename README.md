@@ -4,6 +4,10 @@
 
 > This is an API allows users to book a car present in our database. The user can set the reservation date and final date for a selected car. If the user is an administrator they can upload a car and delete it from our database.
 
+## Frontend Repository
+
+[GitHub Link](https://github.com/indigodavid/ezCar_frontend)
+
 ## ERD diagram
 
 ![ERD](https://user-images.githubusercontent.com/97900045/196997928-2c857de9-a9fc-4216-8480-9580cc9bc6c0.png)
@@ -28,7 +32,7 @@
 - Rubocop
 - Heroku 
 
-## Live Demo (if available)
+## Live Demo
 
 - [eZ_car](https://ezcar-backend.herokuapp.com/api-docs)
 - [Video for the API documentation](https://www.loom.com/share/c4df2507582d4538ae3755f26e359c7f)
