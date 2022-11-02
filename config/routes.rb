@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
   get 'private/test'
+  get 'private/auth_params'
   devise_for :users, 
     path: '', 
     path_names: {
