@@ -10,7 +10,7 @@ class PrivateController < ApplicationController
 
   def auth_params
     @imagekitio = ImageKitIo.client
-    @auth_params = @imagekitio.get_authentication_parameters()
+    @auth_params = @imagekitio.get_authentication_parameters
     render json: @auth_params
   end
 end
