@@ -77,6 +77,23 @@ To get a local copy up and running follow these simple example steps.
 
 [Back-end Heroku Deployment](https://ezcar-backend.herokuapp.com/)
 
+## Kanban Board
+
+### Link
+
+[GitHub Project](https://github.com/indigodavid/ezCar_backend/projects/1)
+
+### Initial State Project Link
+
+[GitHub First Issue](https://github.com/indigodavid/ezCar_backend/issues/22)
+
+### Final Team members
+
+- Arnaud Bandonkeye
+- Julio Gagliardi
+- Darik Mohammed
+- David Vera
+
 ## Authors
 
 👤 **Arnaud Bandonkeye**
