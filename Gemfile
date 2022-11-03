@@ -33,20 +33,38 @@ gem 'bootsnap', require: false
 # Rubocop for linters check
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# Use Devise for authentication and Devise JWT to authenticate using JWT methods
+gem 'devise'
+gem 'devise-jwt'
+
+# Use Cancancan for authorization
+gem 'cancancan'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+# Imagekit for image uploads
+gem 'imagekitio'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
+# Use Active Model has_secure_password
+gem 'rswag'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'capybara'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+
+  # 'dotenv-rails' is for storing secret key in ENV file
+  gem 'dotenv-rails'
 
   # Database Cleaner for keeping the test database clean
   gem 'database_cleaner'
   gem 'rails-controller-testing'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 5.0', '< 6.0'
+  gem 'webdrivers', '>= 5.0', '< 6.0'
 end
 
 group :development do

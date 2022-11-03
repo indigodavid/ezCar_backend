@@ -1,8 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Ez Car
+# Ez Car Backend
 
-> This project contains an API that is consumed by our React frontend. It was built using Rails as an API.
+> This is an API allows users to book a car present in our database. The user can set the reservation date and final date for a selected car. If the user is an administrator they can upload a car and delete it from our database.
+
+## Frontend Repository
+
+[GitHub Link](https://github.com/indigodavid/ezCar_frontend)
 
 ## ERD diagram
 
@@ -10,37 +14,68 @@
 
 ## Built With
 
+### Technologies 
+
 - Ruby on Rails
 - PostgreSQL
 - RSpec
 - Rswag
+- Devise 
+- Devise-JWT
+- CanCanCan
+- Capybara
 
-## Live Demo (if available)
+### Tools
 
-[Live Demo Link](https://livedemo.com)
+- Visual Studio Code
+- GIT
+- Rubocop
+- Heroku 
+
+## Live Demo
+
+- [eZ_car](https://ezcar-backend.herokuapp.com/api-docs)
+- [Video for the API documentation](https://www.loom.com/share/c4df2507582d4538ae3755f26e359c7f)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- ruby 
+- rails 
+- git 
+- bundle
 
 ### Setup
 
+#### Open Terminal 
+
+    git clone git@github.com:indigodavid/ezCar_backend.git
+    cd ezCar_backend
+
 ### Install
+
+    bundle install
+    rails db:create
+    rails db:migrate
+    rails db:seed
 
 ### Usage
 
+    rails server
+    
 ### Run tests
+
+    rspec spec/models
+    rake rswag
 
 ### Deployment
 
+[Front-end Netlify Deployment](https://ezcar.netlify.app/) 
 
+[Back-end Heroku Deployment](https://ezcar-backend.herokuapp.com/)
 
 ## Authors
 
@@ -80,9 +115,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- Splash Background Image by [T. Kaiser](https://unsplash.com/@tkaiser)
 - Hat tip to anyone whose code was used
 - Inspiration
-- etc
+- Our supportive families and Microverse colleagues.
 
 ## 📝 License
 
